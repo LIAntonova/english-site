@@ -1,5 +1,6 @@
 term;explanation;source
-URL;Способ формирования общих абстрактных понятий. При рассмотрении исходных объектов принимать во внимание лишь те их различия, которые в данной ситуации по тем или иным причинам оказываются существенными (для целей и/или задач), игнорируя другие — несущественные.;db
-Аддитивность;Свойство величины, определённой на некотором классе математических или физических объектов, состоящее в том, что значение величины, соответствующее целому объекту, равно сумме значений величин, соответствующих его (непересекающимся) частям при любом разбиении объекта на части;db
-Аксиома;Исходное положение какой-либо теории, принимаемое в рамках данной теории истинным без требования доказательства и используемое при доказательстве других её положений, которые, в свою очередь, называются теоремами;db
-Анзац;Используемый в теоретической физике термин немецкого происхождения, обозначающий некую догадку о том, какую форму должно иметь решение уравнения или системы уравнений, а также само это предполагаемое решение (функция или множество функций).;db
+Uniform Resource Locator;Unique identifier used to locate a resource on the Internet. It is also referred to as a web address.;db
+HyperText Markup Language;Standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.;db
+Cascading Style Sheets;A style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.;db
+Extensible Markup Language;Language and file format for storing, transmitting, and reconstructing arbitrary data.;db
+Comma-separated values;Text file that has a specific format which allows data to be saved in a table structured format.;db
