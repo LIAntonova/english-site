@@ -22,5 +22,7 @@ urlpatterns = [
     path('terms-list', views.terms_list),
     path('add-term', views.add_term),
     path('send-term', views.send_term),
-    path('stats', views.show_stats)
+    path('stats', views.show_stats),
+    path('add-translate', views.add_translate),
+    path('delete/Uniform Resource Locator/', views.term_delete, name='term_delete'),
 ]

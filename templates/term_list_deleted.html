@@ -1,0 +1,28 @@
+   {# term_list_deleted.html #}
+   <h1>Terms</h1>
+   <form method="post">
+       {% csrf_token %}
+       {{ form.as_p }}
+       <button type="submit">Save</button>
+   </form>
+   <table>
+       <thead>
+           <tr>
+               <th>term</th>
+               <th>explanation</th>
+               <th>Actions</th>
+           </tr>
+       </thead>
+       <tbody>
+           {% for term in terms %}
+           <tr>
+               <td>{{ term.term }}</td>
+               <td>{{ term.explanation }}</td>
+               <td>
+                   <a href="{% url 'term_delete' term.pk %}">Delete</a>
+               </td>
+           </tr>
+           {% endfor %}
+       </tbody>
+   </table>
+   
