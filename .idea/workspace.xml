@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0920c1ac-1765-4d48-bcae-ea58e3e8d7e7" name="Changes" comment="Не работает вывод новой формы">
-      <change afterPath="$PROJECT_DIR$/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proj_maths/terms_db.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/delete_order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/term_list_del.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj_maths/terms_work.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj_maths/terms_work.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj_maths/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj_maths/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proj_maths/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/proj_maths/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/calculator.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/calculator.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/term_request.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/term_request.html" afterDir="false" />
-    </list>
+    <list default="true" id="0920c1ac-1765-4d48-bcae-ea58e3e8d7e7" name="Changes" comment="Работа с дизайном" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715313382294</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Работа с дизайном">
+      <option name="closed" value="true" />
+      <created>1715866825833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715866825833</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -182,6 +174,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Создана форма для эксперементов в главном окне" />
     <MESSAGE value="Не работает вывод новой формы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Не работает вывод новой формы" />
+    <MESSAGE value="Работа с дизайном" />
+    <option name="LAST_COMMIT_MESSAGE" value="Работа с дизайном" />
   </component>
 </project>
