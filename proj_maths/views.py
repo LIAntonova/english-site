@@ -5,6 +5,55 @@ from . import terms_work
 from django.shortcuts import redirect
 
 from .terms_work import delete_term_from_csv
+from .terms_work import get_terms_for_table
+
+import csv
+
+
+def terms_list_del(request):
+    terms = terms_work.get_terms_for_table()
+    return render(request, "term_list_del.html", context={"terms": terms})
+
+
+def terms_list_del_del(request):
+
+    if request.method == 'POST':
+        delete_rows = request.POST.getlist('delete_rows')
+
+        # Читаем данные из файла
+        data = terms_work.get_terms_for_table()
+
+        # Удаляем помеченные строки
+        for i in sorted(delete_rows, reverse=True):
+            del data[int(i)]
+
+        # Записываем обновленные данные в файл
+        with open('./data/terms.csv', 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerows(data)
+
+    # Перенаправляем пользователя на страницу со списком терминов
+    return redirect('/term-list')
+
+def terms_list_del_look(request):
+    if request.method == 'POST':
+        rows_to_delete = request.POST.getlist('delete_rows')
+        # Теперь у вас есть список значений, которые были выбраны для удаления
+        # Вы можете выполнить нужные действия здесь, например, удалить соответствующие записи из базы данных
+        # или из файла.
+        print(rows_to_delete)
+        for row_id in rows_to_delete:
+            print()
+            # Здесь вы можете выполнить нужные действия для удаления строки с идентификатором row_id
+            pass
+        # После выполнения действий перенаправьте пользователя на нужную страницу,
+        # например:
+        # return HttpResponseRedirect('/desired-page/')
+    # Если метод запроса не POST, просто перенаправьте пользователя на нужную страницу
+    # с помощью HttpResponseRedirect, если это необходимо.
+
+
+
 
 
 def term_delete(request):

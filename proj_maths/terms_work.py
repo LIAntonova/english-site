@@ -1,5 +1,31 @@
 """Модуль работы с терминами"""
+
+
+# views.py
 import csv
+from django.shortcuts import render
+def terms_list_del_del(request):
+    if request.method == 'POST':
+        delete_rows = request.POST.getlist('delete_rows')
+
+        # Читаем данные из файла
+        with open('./data/terms.csv', 'r') as file:
+            reader = csv.reader(file)
+            data = list(reader)
+
+        # Удаляем помеченные строки
+        for i in sorted(delete_rows, reverse=True):
+            del data[int(i)]
+
+        # Записываем обновленные данные в файл
+        with open('./data/terms.csv', 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerows(data)
+
+    # Перенаправляем пользователя на страницу со списком терминов
+    return redirect('/term-list')
+
+
 
 
 def delete_term_from_csv(term):
@@ -30,6 +56,23 @@ def delete_term_from_csv(term):
         print(f"Error occurred: {e}")
         return None
 
+def terms_list_del_look(request):
+    if request.method == 'POST':
+        rows_to_delete = request.POST.getlist('delete_rows')
+        # Теперь у вас есть список значений, которые были выбраны для удаления
+        # Вы можете выполнить нужные действия здесь, например, удалить соответствующие записи из базы данных
+        # или из файла.
+        print(rows_to_delete)
+        for row_id in rows_to_delete:
+            print()
+            # Здесь вы можете выполнить нужные действия для удаления строки с идентификатором row_id
+            pass
+        # После выполнения действий перенаправьте пользователя на нужную страницу,
+        # например:
+        # return HttpResponseRedirect('/desired-page/')
+    # Если метод запроса не POST, просто перенаправьте пользователя на нужную страницу
+    # с помощью HttpResponseRedirect, если это необходимо.
+
 
 def get_terms_for_table():
     """Функция возвращает список терминов"""
@@ -41,6 +84,13 @@ def get_terms_for_table():
             terms.append([cnt, term, definition])
             cnt += 1
     return terms
+
+
+
+
+
+
+
 
 
 def write_term(new_term, new_definition):
@@ -56,18 +106,7 @@ def write_term(new_term, new_definition):
     with open("./data/terms.csv", "w", encoding="utf-8") as f:
         f.write("\n".join(new_terms))
 
-def write_translate(new_term1, new_definition1):
-    """Функция записи новых переводов - сделана как копия из функции записи, писала в файл terms. Попытка сделать второй файл базы данных не получилась"""
-    new_term1_line = f"{new_term1};{new_definition1};user"
-    with open("./data/translate.csv", "r", encoding="utf-8") as f:
-        existing_terms = [l.strip("\n") for l in f.readlines()]
-        title = existing_terms[0]
-        old_terms = existing_terms[1:]
-    terms_sorted = old_terms + [new_term1_line]
-    terms_sorted.sort()
-    new_terms = [title] + terms_sorted
-    with open("./data/translate.csv", "w", encoding="utf-8") as f:
-        f.write("\n".join(new_terms))
+
 
 
 def get_terms_stats():

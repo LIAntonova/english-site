@@ -1,33 +1,34 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Математика и её термины
+Изучение английского
 {% endblock %}
 
 {% block page-lead %}
-Это страничка проекта про изучение математики. <br/>
-Этот проект и его исходный код можно использовать как reference или источник вдохновения для своего проекта.
+Это страничка проекта про изучения английского языка. <br/>
+Программу можно использовать для изучения английских терминов
 {% endblock %}
+<link rel="icon" type="image/ico" href="favicon.ico">
 
 {% block content %}
 <div class="container px-4 py-5" id="project-contents">
     <h2 class="pb-2 border-bottom">Что есть в этом проекте</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
         <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <div class="icon-square text-bg-primary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
             </div>
             <div>
-                <h3 class="fs-2">Список терминов</h3>
+                <h3 class="fs-2 ">Список терминов</h3>
                 <p>Простая страница с контентом, который разложен в таблицу. Содержимое таблицы находится в текстовом
                     файле (если вы уверенно себя чувствуете, замените текстовый файл на базу данных).</p>
                 <a href="/terms-list" class="btn btn-primary">Посмотреть</a>
             </div>
         </div>
         <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <div class="icon-square text-bg-primary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
@@ -42,7 +43,7 @@
             </div>
         </div>
          <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <div class="icon-square text-bg-primary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>
@@ -51,13 +52,13 @@
                 <h3 class="fs-2">Форма для ЭКСПЕРИМЕНТОВ"</h3>
                 <p>Пример POST-запроса, который отправится после того, как вы заполните форму. Он допишет термин в ваш
                     текстовый файл, и если всё будет успешно — вас перенаправят на страницу терминов</p>
-                <a href="/stats" class="btn btn-primary">
+                <a href="/terms-list-del" class="btn btn-primary">
                     Заполнить
                 </a>
             </div>
         </div>
         <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <div class="icon-square text-bg-primary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
                 <svg class="bi" width="1em" height="1em">
                     <use xlink:href="#cpu-fill"></use>
                 </svg>

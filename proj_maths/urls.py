@@ -25,4 +25,6 @@ urlpatterns = [
     path('stats', views.show_stats),
     path('add-translate', views.add_translate),
     path('delete/Uniform Resource Locator/', views.term_delete, name='term_delete'),
+    path('terms-list-del', views.terms_list_del),
+    path('terms-list-del-del', views.terms_list_del_look),
 ]
