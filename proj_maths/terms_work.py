@@ -3,13 +3,13 @@
 
 # views.py
 import csv
-from django.shortcuts import render
+
 def terms_list_del_del(request):
+    """ функция подтверждения удаления строки из списка"""
     if request.method == 'POST':
         delete_rows = request.POST.getlist('delete_rows')
 
-        # Читаем данные из файла
-        with open('./data/terms.csv', 'r') as file:
+        with open('./data/terms.csv', 'r') as file:  #Читаем данные из файла
             reader = csv.reader(file)
             data = list(reader)
 
@@ -29,6 +29,7 @@ def terms_list_del_del(request):
 
 
 def delete_term_from_csv(term):
+    """удаление слова из файла CSV"""
     try:
         # Открываем файл и читаем его содержимое
         with open("./data/terms.csv", "r", encoding="utf-8") as file:
@@ -134,5 +135,3 @@ def get_terms_stats():
         "words_min": min(defin_len)
     }
     return stats
-
-

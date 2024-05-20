@@ -1,6 +1,7 @@
 term;explanation;source
-Uniform Resource Locator;Unique identifier used to locate a resource on the Internet. It is also referred to as a web address.;db
-HyperText Markup Language;Standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.;db
 Cascading Style Sheets;A style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML or XML.;db
-Extensible Markup Language;Language and file format for storing, transmitting, and reconstructing arbitrary data.;db
 Comma-separated values;Text file that has a specific format which allows data to be saved in a table structured format.;db
+Extensible Markup Language;Language and file format for storing, transmitting, and reconstructing arbitrary data.;db
+HyperText Markup Language;Standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content.;db
+Uniform Resource Locator;Unique identifier used to locate a resource on the Internet. It is also referred to as a web address.;db
+q;qq;user

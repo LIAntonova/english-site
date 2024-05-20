@@ -1,21 +1,20 @@
+import csv
 from django.shortcuts import render
 from django.core.cache import cache
-from . import terms_work
-
 from django.shortcuts import redirect
-
+from . import terms_work
 from .terms_work import delete_term_from_csv
-from .terms_work import get_terms_for_table
 
-import csv
 
 
 def terms_list_del(request):
+    """показ формы удаления выделенных терминов"""
     terms = terms_work.get_terms_for_table()
     return render(request, "term_list_del.html", context={"terms": terms})
 
 
 def terms_list_del_del(request):
+    """подтверждение удаления выделенных терминов"""
 
     if request.method == 'POST':
         delete_rows = request.POST.getlist('delete_rows')
@@ -36,6 +35,7 @@ def terms_list_del_del(request):
     return redirect('/term-list')
 
 def terms_list_del_look(request):
+    """просмотр терминов на удаление"""
     if request.method == 'POST':
         rows_to_delete = request.POST.getlist('delete_rows')
         # Теперь у вас есть список значений, которые были выбраны для удаления
@@ -57,6 +57,7 @@ def terms_list_del_look(request):
 
 
 def term_delete(request):
+    """удаление терминов"""
     #terms = terms_work.get_terms_for_table()
     updated_data = delete_term_from_csv()
     #return render(request, "term_list.html", context={"terms": terms})
@@ -67,24 +68,29 @@ def term_delete(request):
 
 
 def index(request):
+    """показ главной страницы"""
     return render(request, "index.html")
 
 
 def terms_list(request):
+    """показ окна списка терминов"""
     terms = terms_work.get_terms_for_table()
     return render(request, "term_list.html", context={"terms": terms})
     return render(request, "term_list.html", context={"terms": terms})
 
 
 def add_term(request):
+    """ отображение формы добавления терминов"""
     return render(request, "term_add.html")
 
 
 def add_translate(request):
+    """ отображение формы переводов терминов"""
     return render(request, "translate_add.html")
 
 
 def send_term(request):
+    """ функция записи терминов в файл CSV"""
     if request.method == "POST":
         cache.clear()
         user_name = request.POST.get("name")
@@ -109,6 +115,7 @@ def send_term(request):
 
 
 def send_translate(request):
+    """ функция записи переводов в файл CSV"""
     if request.method == "POST":
         cache.clear()
         user_name = request.POST.get("name")
@@ -133,5 +140,6 @@ def send_translate(request):
 
 
 def show_stats(request):
+    """ функция показа статистики"""
     stats = terms_work.get_terms_stats()
     return render(request, "stats.html", stats)
